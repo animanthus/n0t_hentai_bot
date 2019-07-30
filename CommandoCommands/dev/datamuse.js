@@ -5,10 +5,10 @@ const request = require('node-superfetch');
 module.exports = class OxfordCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'oxford',
-			group: 'prod',
-			memberName: 'cat',
-			description: 'Super Fetch tester',
+			name: 'datamuse',
+			group: 'dev',
+			memberName: 'datamuse',
+			description: 'Currently in development! Please don\'t use this!!!',
 			throttling:{
 				usages:1,
 				duration:300,
