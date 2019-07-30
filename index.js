@@ -41,7 +41,7 @@ client.on('ready', () => {
     logger.log ('info',`Logged in as ${client.user.tag}!`);
     //console.log(`Logged in as ${client.user.tag}!`);
     //console.log('Logged in as '+  client.user.tag);
-    client.user.setActivity('Fairly Useless Ngl');
+    client.user.setActivity('git clone https://github.com/animanthus/n0t_hentai_bot');
     });
 
 client.login(token);
