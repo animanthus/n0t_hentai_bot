@@ -3,7 +3,7 @@ const sqlite = require('sqlite');
 const {CommandoClient, SQLiteProvider} = require('discord.js-commando');
 const path = require('path');
 const winston = require('winston');
-const {token } = require('./config.json');
+// const {token } = require('./config.json');
 
 const client = new CommandoClient({
     commandPrefix: '%',
