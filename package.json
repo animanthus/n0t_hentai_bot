@@ -2,9 +2,9 @@
   "name": "n0t_hentai_bot",
   "version": "1.0.0",
   "description": "a lil safe for work discord bot built with discord.js",
-  "main": "index.js",
+  "main": "indexHeroku.js",
   "scripts": {
-    "test": "none yet!"
+    "start": "node indexHeroku.js"
   },
   "repository": {
     "type": "git",
