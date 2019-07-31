@@ -2,19 +2,22 @@ const { Command } = require('discord.js-commando');
 const request = require('node-superfetch');
 
 
-module.exports = class OxfordCommand extends Command {
+module.exports = class datamuseCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'datamuse',
-			group: 'dev',
-			memberName: 'datamuse',
-			description: 'Currently in development! Please don\'t use this!!!',
-			throttling:{
-				usages:1,
-				duration:300,
+			name: 'meanslike',
+			group: 'prod',
+			memberName: 'meanslike',
+			examples:['MeansLike a soft touch', 'MeansLike a loud noise'],
+			description: 'synonyms well uhh kinda (still in dev on the backburner ahahhahahaha)',
+			args: [
 
-			},
-			guildOnly:true,
+				{
+					key: 'content',
+					prompt: 'What phrase do you want your word to mean like?',
+					type: 'string',
+				},
+			],
 		});
 	}
 

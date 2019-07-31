@@ -14,8 +14,8 @@ module.exports = class CatCommand extends Command {
 				duration:300,
 
 			},
-			guildOnly:true
-		});    
+			guildOnly:true,
+		});
 	}
 
 	async run(msg) {
@@ -23,7 +23,8 @@ module.exports = class CatCommand extends Command {
 			const { body } = await request.get('https://aws.random.cat/meow');
 			// console.log(body);
 			return msg.say({ files: [body.file] });
-		} catch (err) {
+		}
+		catch (err) {
 			return msg.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
 		}
 	}
