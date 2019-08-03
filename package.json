@@ -22,6 +22,10 @@
   "homepage": "https://github.com/animanthus/n0t_hentai_bot#readme",
   "dependencies": {
     "axios": "^0.19.0",
+<<<<<<< HEAD
+=======
+    "cheerio": "^1.0.0-rc.3",
+>>>>>>> d66a64e0b85fb6f91b460c8c6911b82dd437e4e9
     "discord.js": "^11.5.1",
     "discord.js-commando": "^0.10.0",
     "mal-scraper": "^2.6.3",
