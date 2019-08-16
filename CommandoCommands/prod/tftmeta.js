@@ -30,7 +30,6 @@ module.exports = class tftmetaCommand extends Command {
 					listImgs[i] = element['attribs']['src'];
 
 
-
 				});
 			}
 
