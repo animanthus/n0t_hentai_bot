@@ -24,7 +24,8 @@ client.registry
     .registerDefaultTypes()
     .registerGroups([
         ['dev', 'functions in development'],
-        ['prod', 'stuff that kinda works lol']
+        ['prod', 'stuff that kinda works lol'],
+        ['hentai', 'it\'s what you think it is'],
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
