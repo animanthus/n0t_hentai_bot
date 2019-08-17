@@ -6,7 +6,7 @@ module.exports = class rHentaiCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'rhentai',
-			group: 'dev',
+			group: 'hentai',
 			memberName: 'rhentai',
 			description: 'Hentai Image Fetcher. Sends random images from frontpage of r/hentai !! Fails when the images are too large :/',
 			args: [
@@ -36,9 +36,9 @@ module.exports = class rHentaiCommand extends Command {
 
 			for (let c = 0; c < count; c++) {
 				const randomNum = Math.floor((Math.random() * 24) + 2);
-				console.log(randomNum);
+				
 				imgset[c] = body.data.children[randomNum].data.url;
-				console.log(imgset[c]);
+				
 				if(imgset[c].includes('gfycat')) {
 					const link = imgset[c];
 					if(c === 0) {
