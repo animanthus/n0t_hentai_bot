@@ -1,22 +1,22 @@
-const malScraper = require('mal-scraper');
-const search = malScraper.search;
+const Mangadex = require('mangadex-api');
+
 const { Command } = require('discord.js-commando');
 const { RichEmbed } = require('discord.js');
 
 
-module.exports = class malsearchCommand extends Command {
+module.exports = class mangadexCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'malsearch',
+			name: 'mangadex',
 			group: 'dev',
-			memberName: 'malsearch',
-			aliases: ['ml', 'anime'],
-			description: 'Searches anime from myanimelist',
-			examples: ['say Hi there!'],
+			memberName: 'mangadex',
+			aliases:['manga'],
+			description: 'Searches manga from mangadex',
+			examples: ['%manga attack on titan'],
 			args: [
 				{
 					key: 'text',
-					prompt: 'What anime do you want to search?',
+					prompt: 'What manga do you want to search?',
 					type: 'string',
 				},
 			],
@@ -24,7 +24,15 @@ module.exports = class malsearchCommand extends Command {
 	}
 
 	async run(msg, { text }) {
-		const info = await malScraper.getInfoFromName(text);
+		const info = await Mangadex.search(text);
+		const info2 = await Mangadex.search('senko');
+		Mangadex.search('senko').then(response => {
+			console.log(`Found ${response.titles.length} titles.`);
+		  })
+		console.log(info.titles);
+		console.log(info2.titles);
+		return msg.say('done');
+		/*
 		const content = [];
 		content[0] = info.title;
 		content[1] = info.url;
@@ -42,5 +50,6 @@ module.exports = class malsearchCommand extends Command {
 			.setURL(content[1])
 			.setImage(picture);
 		return msg.embed(embed);
+		*/
 	}
 };
